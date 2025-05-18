@@ -61,7 +61,7 @@ class TestLoadSheets(unittest.TestCase):
     mock_update.execute.side_effect = Exception("API error")
 
     df = pd.DataFrame({"A": [1]})
-    with self.assertLogs('utils.load_data.load_googlesheets', level='ERROR') as log:
+    with self.assertLogs("utils.load_data.load_googlesheets", level="ERROR") as log:
         saved_to_google_sheets(df)
     self.assertTrue(any("Terjadi kesalahan" in message for message in log.output))
 
@@ -91,7 +91,7 @@ class TestLoadSheets(unittest.TestCase):
 
     df = pd.DataFrame()
 
-    with self.assertLogs('utils.load_data.load_googlesheets', level='WARNING') as log:
+    with self.assertLogs("utils.load_data.load_googlesheets", level="WARNING") as log:
       saved_to_google_sheets(pd.DataFrame()) 
     self.assertTrue(any("DataFrame kosong" in message for message in log.output))
 
