@@ -1,0 +1,10 @@
+pandas==2.2.3
+requests==2.32.3
+beautifulsoup4==4.13.3
+google-auth==2.40.1
+google-api-python-client==2.169.0
+pytest-cov==6.1.1
+pytest==8.3.5
+python-crontab ~= 3.2
+sqlalchemy~=2.0
+psycopg2-binary~=2.9

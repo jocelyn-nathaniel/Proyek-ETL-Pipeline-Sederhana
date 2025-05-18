@@ -1,0 +1,20 @@
+# Menjalankan skrip
+python main.py
+
+# Menjalankan unit test pada folder tests
+PYTHONPATH=. pytest tests
+
+# Menjalankan test coverage pada folder tests
+PYTHONPATH=. pytest --cov=tests tests/
+
+# Url Google Sheets: 
+https://docs.google.com/spreadsheets/d/1m6PnN4NuyFY3rin66qBQZ2n02-XabaUIprxjXszs34c/edit?usp=sharing
+
+# Memeriksa tipe data dan dirty pattern
+python checks/check_tipe_invalid_data.py
+
+# Menjalankan skrip folder utils mengenai extract, transform, dan load
+python utils/extract_data/extract.py
+python utils/transform_data/transform.py
+python utils/load_data/load_csv.py
+python utils/load_data/load_googlesheets.py
